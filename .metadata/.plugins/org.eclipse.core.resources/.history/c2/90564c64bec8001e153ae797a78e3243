@@ -1,0 +1,15 @@
+package com.deep.springBoot3Learn;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CourseController {
+	
+	public List<Courses> getAllCourses(){
+		return Arrays.asList(null)
+	}
+}

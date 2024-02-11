@@ -1,0 +1,13 @@
+package com.deep.jpaAndHibernateLearn.course;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Course {
+	
+	private long id ;
+	private String name;
+	private String instructor;
+	
+	
+}

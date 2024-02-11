@@ -1,0 +1,28 @@
+package com.deep.learningSpring;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Configuration;
+
+import com.deep.learningSpring.game.GamingConsole;
+import com.deep.learningSpring.game.PacmanGame;
+
+@Configuration
+public class SpringApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringApp.class);
+			
+			@Bean
+			public GamingConsole game() {
+				GamingConsole game = new PacmanGame();
+				return game;
+			}
+			
+			
+	}
+
+}
+
+
+
+ 

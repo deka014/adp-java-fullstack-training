@@ -1,0 +1,7 @@
+package com.deep.jpaAndHibernateLearn.course.jpa;
+
+import org.springframework.boot.CommandLineRunner;
+
+public class CourseJPACommandLineRunner implements CommandLineRunnernd {
+
+}

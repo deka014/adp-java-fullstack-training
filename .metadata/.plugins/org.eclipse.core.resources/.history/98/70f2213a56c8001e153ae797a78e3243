@@ -1,0 +1,5 @@
+package com.deep.learningSpring;
+
+public class HelloWorldConfiguration {
+
+}

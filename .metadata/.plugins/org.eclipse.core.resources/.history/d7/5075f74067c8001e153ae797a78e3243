@@ -1,0 +1,18 @@
+package com.deep.learningSpring;
+
+import javax.swing.text.AbstractDocument.Content;
+
+import org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails.Address;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class SpringApp {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
+
+
+
+ 

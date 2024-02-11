@@ -1,0 +1,8 @@
+package streamApiLearn;
+
+public class BasicStringOperation {
+	
+	List<Integer> = new ArrayList<>(1,2,3,4);
+	
+	
+}

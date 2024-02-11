@@ -1,0 +1,48 @@
+package com.deep.jpaAndHibernateLearn.course.jdbc;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.deep.jpaAndHibernateLearn.course.Course;
+
+@Repository
+public class CourseJdbcRepository {
+	
+	@Autowired
+	private JdbcTemplate springJdbcTemplate;
+	
+	private static String QUERY = 
+			"""
+			insert into course (id,name,instructor) 
+			values (?,?,?);
+			""";
+	
+	private static String deleteQuery  = 
+			"""
+			delete from course where id = ?;
+			""";
+	
+	
+	private static String selectQuery = 
+			"""
+			select * from course where id = ?;
+			""";
+	
+//	public void insert() {
+//		springJdbcTemplate.update(QUERY);
+//	}
+	
+	public void insert(Course course) {
+		springJdbcTemplate.update(QUERY,course.getId(),course.getName(),course.getInstructor());
+	}
+	
+	public void delete (long id) {
+		springJdbcTemplate.update(deleteQuery,id);
+	}
+	
+	public Course findById(long id) {
+		springJdbcTemplate.queryForObject(selectQuery,null,id);
+		//row mapper is the second parameter
+	}
+}

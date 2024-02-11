@@ -1,0 +1,20 @@
+package com.deep.jpaAndHibernateLearn.course.jpa;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.deep.jpaAndHibernateLearn.course.Course;
+
+import jakarta.persistence.EntityManager;
+
+@Repository
+public class CourseJpaRepository {
+	@Autowired
+	private EntityManager em;
+	
+	public void insert(Course course) {
+		em.merge(null)
+		
+	}
+	
+}

@@ -1,0 +1,28 @@
+package com.deep.learningSpring;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+
+record Student(String name,int age) {};
+
+
+@Configuration
+public class HelloWorldConfiguration {
+	
+	@Bean
+	public String name() {
+		return "This is working";
+	}
+	
+	@Bean
+	public int age() {
+		return 23;
+	}
+	
+	@Bean
+	public Student student() {
+		Student student = new Student("Tangudu",25);
+		return student;
+	}
+}

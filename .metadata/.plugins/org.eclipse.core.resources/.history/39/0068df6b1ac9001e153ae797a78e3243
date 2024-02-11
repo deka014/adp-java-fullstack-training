@@ -1,0 +1,5 @@
+package com.deep.jpaAndHibernateLearn.course.jpa;
+
+public class courseJpaRepository {
+
+}

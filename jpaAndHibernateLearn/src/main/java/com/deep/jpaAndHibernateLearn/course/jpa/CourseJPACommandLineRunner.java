@@ -1,0 +1,37 @@
+package com.deep.jpaAndHibernateLearn.course.jpa;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.deep.jpaAndHibernateLearn.course.Course;
+import com.deep.jpaAndHibernateLearn.course.sringdatajpa.CourseSpringDataJpaRepository;
+
+@Component
+public class CourseJPACommandLineRunner implements CommandLineRunner {
+
+//	@Autowired
+//	private CourseJpaRepository repo;
+	@Autowired
+	private CourseSpringDataJpaRepository repo;
+	@Override
+	public void run(String... args) throws Exception {
+		// TODO Auto-generated method stub
+//		repo.insert(new Course(1,"Learn Full stack" , "jui dhora"));
+//		repo.insert(new Course(2,"RPS" , "Jag bhai"));
+//		repo.deleteById(2);
+//		System.out.println(repo.findById(1)); 
+		
+		repo.save(new Course(1,"Learn Full stack" , "jui dhora"));
+		repo.save(new Course(2,"RPS" , "Jag bhai"));
+		//it is 2L meaning long sing the id is long
+		repo.deleteById(2l);
+		System.out.println(repo.findById(1l)); 
+		
+		
+		
+	}
+	
+	
+
+}

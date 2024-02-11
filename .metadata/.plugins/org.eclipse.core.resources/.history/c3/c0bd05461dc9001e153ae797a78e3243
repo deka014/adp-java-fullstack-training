@@ -1,0 +1,8 @@
+package com.deep.jpaAndHibernateLearn.course.sringdatajpa;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CourseSpringDataJpaRepository extends JpaRepository<Course, Long>{
+	
+
+}

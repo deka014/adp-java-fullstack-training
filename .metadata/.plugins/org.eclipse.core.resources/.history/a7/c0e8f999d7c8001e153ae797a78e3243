@@ -1,0 +1,9 @@
+package com.deep.springBoot3Learn;
+
+
+//currency-service.url = 
+//currency-service.username = 
+//currency-service.key = 
+public class CurrencyServiceConfiguration {
+	
+}

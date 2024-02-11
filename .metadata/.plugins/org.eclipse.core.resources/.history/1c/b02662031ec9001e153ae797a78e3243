@@ -1,0 +1,10 @@
+package com.deep.jpaAndHibernateLearn.course.sringdatajpa;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.deep.jpaAndHibernateLearn.course.Course;
+
+public interface CourseSpringDataJpaRepository extends JpaRepository<Course, Long>{
+	
+	findByInstructor()
+}

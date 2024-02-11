@@ -1,0 +1,19 @@
+package com.deep.learningSpring;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class HelloWorldConfiguration {
+	
+	@Bean
+	public String name() {
+		return "This is working";
+	}
+	
+	@Bean
+	public int age() {
+		return 23;
+	}
+	
+}
